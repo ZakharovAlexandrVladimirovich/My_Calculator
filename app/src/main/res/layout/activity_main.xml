@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/kod_dvoichnyi"
     tools:context=".MainActivity">
 
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="100dp"
         android:layout_marginTop="100dp"
         android:autoSizeMaxTextSize="50sp"
         android:autoSizeMinTextSize="15sp"
         android:autoSizeTextType="uniform"
+        android:gravity="right|center"
         android:ems="10"
         android:inputType="textMultiLine"
         android:maxLines="1"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="sfsadf" />
@@ -128,11 +131,12 @@
             android:backgroundTint="#BD0DDC"
             android:text="8" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
+            style="@style/MyButton"
+            app:cornerRadius="50dp"
+            app:strokeWidth="5dp"
+            app:strokeColor="@color/white"
             android:text="9" />
 
         <Button
@@ -160,8 +164,8 @@
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="3" />
+            android:backgroundTint="@color/my_color"
+            android:text="@string/button_3_text" />
 
 
         <Button
