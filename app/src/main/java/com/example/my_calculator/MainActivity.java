@@ -14,10 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button  button1 = findViewById(R.id.button4);
+        Button  button1 = findViewById(R.id.button1);
         EditText editText = findViewById(R.id.editTextTextMultiLine);
 
-        button1.setOnClickListener(v -> editText.setText(String.format("%s", "12345")));
+        button1.setOnClickListener(v -> editText.setText(String.format("%s", "1")));
+
 
     }
 }

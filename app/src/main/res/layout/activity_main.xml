@@ -12,183 +12,132 @@
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
         android:autoSizeMaxTextSize="50sp"
         android:autoSizeMinTextSize="15sp"
         android:autoSizeTextType="uniform"
-        android:gravity="right|center"
+        android:background="@color/white"
         android:ems="10"
+        android:gravity="right|center"
         android:inputType="textMultiLine"
         android:maxLines="1"
-        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="sfsadf" />
+        tools:text="My_calculator" />
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="4"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine">
 
-        <Button
-            android:id="@+id/button24"
-            android:layout_width="68dp"
-            android:layout_height="48dp"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="*"
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button25"
-            android:layout_width="68dp"
-            android:layout_height="48dp"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="-"
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button26"
-            android:layout_width="68dp"
-            android:layout_height="48dp"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="+"
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button27"
-            android:layout_width="68dp"
-            android:layout_height="48dp"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="="
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="68dp"
-            android:layout_height="48dp"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="/"
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#100F0F"
-            android:text="del" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="%"
-            app:rippleColor="#121111"
-            app:strokeColor="#0E0E0E" />
-
-        <Button
-            android:id="@+id/button17"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonErase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#E30909"
             android:text="C"
             app:layout_constraintTop_toTopOf="@+id/button16" />
 
-        <Button
-            android:id="@+id/button13"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCleaning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#034906"
-            android:text="0" />
+            android:backgroundTint="#100F0F"
+            android:text="del" />
 
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0B0A0A"
-            android:backgroundTint="#EFD80A"
-            android:text="."
-            app:strokeColor="#0E0E0E" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonANegativeNumber"
+            style="@style/MyButton2"
+            android:text="+/_" />
 
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#04DD0D"
-            android:text="0." />
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMultiplication"
+            style="@style/MyButton2"
+            android:text="*" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button7"
+            style="@style/MyButtonNumbers"
+            android:backgroundTint="#FF5722"
+            android:text="7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button8"
+            style="@style/MyButtonNumbers"
             android:text="8" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button12"
-            style="@style/MyButton"
-            app:cornerRadius="50dp"
-            app:strokeWidth="5dp"
-            app:strokeColor="@color/white"
+            android:id="@+id/button9"
+            style="@style/MyButtonNumbers"
             android:text="9" />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="7" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDivision"
+            style="@style/MyButton2"
+            android:text="/" />
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="2" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            style="@style/MyButtonNumbers"
+            android:text="4" />
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button5"
+            style="@style/MyButtonNumbers"
+            android:text="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button6"
+            style="@style/MyButtonNumbers"
+            android:text="6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSubtraction"
+            style="@style/MyButton2"
+            android:text="-" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
+            style="@style/MyButtonNumbers"
             android:text="1" />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/my_color"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            style="@style/MyButtonNumbers"
+            android:text="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
+            style="@style/MyButtonNumbers"
             android:text="@string/button_3_text" />
 
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="4" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddition"
+            style="@style/MyButton2"
+            android:text="+" />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="6" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonZero"
+            style="@style/MyButtonNumbers"
+            android:text="0" />
 
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BD0DDC"
-            android:text="5" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPoint"
+            style="@style/MyButton2"
+            android:text="." />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonEqually"
+            style="@style/MyButton2"
+            android:text="=" />
+
 
     </GridLayout>
 
