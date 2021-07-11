@@ -131,9 +131,9 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonAddition"
+            android:id="@+id/buttonSum"
             style="@style/MyButton2"
-            android:text="@string/button_addition" />
+            android:text="@string/button_sum" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
@@ -148,7 +148,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonEqually"
+            android:id="@+id/buttonEqual"
             style="@style/MyButton2"
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
