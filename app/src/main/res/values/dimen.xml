@@ -4,6 +4,6 @@
     <dimen name="button_width">100dp</dimen>
     <dimen name="button_height">100dp</dimen>
     <dimen name="button_width_land">180dp</dimen>
-    <dimen name="button_height_land">50dp</dimen>
+    <dimen name="button_height_land">49dp</dimen>
 
 </resources>
