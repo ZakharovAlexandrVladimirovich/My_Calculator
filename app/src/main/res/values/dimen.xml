@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_text_size">20sp</dimen>
-    <dimen name="button_width">wrap_content</dimen>
-    <dimen name="button_height">wrap_content</dimen>
+    <dimen name="button_width">100dp</dimen>
+    <dimen name="button_height">100dp</dimen>
+    <dimen name="button_width_land">180dp</dimen>
+    <dimen name="button_height_land">50dp</dimen>
 
 </resources>

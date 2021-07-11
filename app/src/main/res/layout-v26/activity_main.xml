@@ -16,9 +16,9 @@
         android:autoSizeMinTextSize="50sp"
         android:autoSizeTextType="uniform"
         android:background="@color/white"
-        android:textAlignment="textEnd"
         android:inputType="numberDecimal"
         android:maxLines="1"
+        android:textAlignment="textEnd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="My_calculator" />
@@ -35,15 +35,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonErase"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            style="@style/MyButton2"
             android:backgroundTint="#E30909"
             android:text="@string/button_erase" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCleaning"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            style="@style/MyButton2"
             android:backgroundTint="#100F0F"
             android:text="@string/button_cleaning" />
 
@@ -135,10 +133,15 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEqually"
             style="@style/MyButton2"
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="0"
             android:text="@string/button_equal" />
-
 
     </GridLayout>
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

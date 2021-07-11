@@ -11,7 +11,7 @@
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:autoSizeMaxTextSize="100sp"
         android:autoSizeMinTextSize="50sp"
         android:autoSizeTextType="uniform"
@@ -26,24 +26,21 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
         android:columnCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonErase"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            style="@style/MyButton2"
             android:backgroundTint="#E30909"
             android:text="@string/button_erase" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCleaning"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            style="@style/MyButton2"
             android:backgroundTint="#100F0F"
             android:text="@string/button_cleaning" />
 
@@ -61,7 +58,6 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             style="@style/MyButtonNumbers"
-            android:backgroundTint="#FF5722"
             android:text="@string/button_7_text" />
 
         <com.google.android.material.button.MaterialButton
