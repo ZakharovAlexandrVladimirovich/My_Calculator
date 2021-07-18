@@ -7,34 +7,36 @@
     android:background="@drawable/kod_dvoichnyi"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:autoSizeMaxTextSize="100sp"
             android:autoSizeMinTextSize="50sp"
             android:autoSizeTextType="uniform"
             android:background="@color/white"
-            android:inputType="numberDecimal"
             android:maxLines="1"
             android:textAlignment="textEnd"
             android:textSize="50sp"
+            android:textStyle="italic"
             tools:text="Calculate" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@color/black"
-            tools:text="@string/textview"
             android:textAlignment="textEnd"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="@string/textView" />
     </LinearLayout>
 
     <GridLayout

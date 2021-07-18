@@ -12,8 +12,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
             android:layout_width="366dp"
             android:layout_height="50dp"
             android:autoSizeMaxTextSize="100sp"
@@ -24,22 +24,22 @@
             android:maxLines="1"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
+            android:textStyle="italic"
             tools:text="Calculate" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/black"
-            tools:text="@string/textview"
-            android:textAlignment="textEnd"
             android:inputType="numberDecimal"
+            android:textAlignment="textEnd"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="@string/textView" />
 
     </LinearLayout>
-
-
 
 
     <GridLayout
@@ -48,8 +48,7 @@
         android:columnCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-       >
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonErase"
@@ -150,8 +149,8 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEqual"
             style="@style/MyButton2"
-            android:layout_gravity="fill"
             android:layout_columnSpan="2"
+            android:layout_gravity="fill"
             android:text="@string/button_equal" />
 
 

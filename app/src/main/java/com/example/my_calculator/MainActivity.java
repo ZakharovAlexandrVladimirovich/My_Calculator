@@ -1,70 +1,193 @@
 package com.example.my_calculator;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private final int[] buttons = {R.id.button0, R.id.button1, R.id.button2, R.id.button3,
-            R.id.button4, R.id.button5, R.id.button6, R.id.button7, R.id.button8, R.id.button9,
-            R.id.buttonDivision, R.id.buttonMultiplication, R.id.buttonPoint, R.id.buttonSubtraction,
-            R.id.buttonSum,R.id.buttonEqual,R.id.buttonANegativeNumber};
-    private final String[] buttonsValue = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "/",
-            "*", ".", "-", "+","=","-"};
+    public static final String KEY_EDIT_TEXT = "KEY_EDIT_TEXT";
+    public static final String KEY_TEXT_VIEW = "KEY_TEXT_VIEW";
+    StringBuilder stringBuilder;
     EditText editText;
-
+    TextView textView;
+    private String a;
+    private String b;
+    private char mathSign;
+    private double minus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        stringBuilder = new StringBuilder();
+        editText = findViewById(R.id.editText);
+        textView = findViewById(R.id.textView);
+        textView.setOnClickListener(v -> {
+            textView.setText("Тут будет отображаться результат");
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            MainActivity.this.startActivity(intent);
+        });
+        findViewById(R.id.button0).setOnClickListener(v -> {
+            editText.append("0");
+            stringBuilder.append('0');
+        });
+        findViewById(R.id.button1).setOnClickListener(v -> {
+            editText.append("1");
+            stringBuilder.append('1');
+        });
+        findViewById(R.id.button2).setOnClickListener(v -> {
+            editText.append("2");
+            stringBuilder.append('2');
+        });
+        findViewById(R.id.button3).setOnClickListener(v -> {
+            editText.append("3");
+            stringBuilder.append('3');
+        });
+        findViewById(R.id.button4).setOnClickListener(v -> {
+            editText.append("4");
+            stringBuilder.append('4');
+        });
+        findViewById(R.id.button5).setOnClickListener(v -> {
+            editText.append("5");
+            stringBuilder.append('5');
+        });
+        findViewById(R.id.button6).setOnClickListener(v -> {
+            editText.append("6");
+            stringBuilder.append('6');
+        });
+        findViewById(R.id.button7).setOnClickListener(v -> {
+            editText.append("7");
+            stringBuilder.append('7');
+        });
+        findViewById(R.id.button8).setOnClickListener(v -> {
+            editText.append("8");
+            stringBuilder.append('8');
+        });
+        findViewById(R.id.button9).setOnClickListener(v -> {
+            editText.append("9");
+            stringBuilder.append('9');
+        });
+        findViewById(R.id.buttonErase).setOnClickListener(v -> {
+            editText.setText(" ");
+            textView.setText(" ");
+            a = " ";
+            b = " ";
+            stringBuilder.delete(0, stringBuilder.length());
+        });
 
-        buttonClickInitialaizer2();
-        editText = findViewById(R.id.editTextTextMultiLine);
+        findViewById(R.id.buttonCleaning).setOnClickListener(v -> {
+            editText.setText(" ");
+            stringBuilder.delete(0, stringBuilder.length());
+        });
 
-//        Button button = findViewById(R.id.buttonMultiplication);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                editText.setText("*");
-//            }
-//        });
-
+        findViewById(R.id.buttonMultiplication).setOnClickListener(v -> {
+            a = String.valueOf(editText.getText());
+            editText.setText("*");
+            mathSign = '*';
+            stringBuilder.append('*');
+            editText.setText(" ");
+        });
+        findViewById(R.id.buttonDivision).setOnClickListener(v -> {
+            a = String.valueOf(editText.getText());
+            editText.setText("/");
+            mathSign = '/';
+            stringBuilder.append('/');
+            editText.setText(" ");
+        });
+        findViewById(R.id.buttonSum).setOnClickListener(v -> {
+            a = String.valueOf(editText.getText());
+            editText.setText("+");
+            mathSign = '+';
+            stringBuilder.append('+');
+            editText.setText(" ");
+        });
+        findViewById(R.id.buttonSubtraction).setOnClickListener(v -> {
+            a = String.valueOf(editText.getText());
+            editText.setText("-");
+            mathSign = '-';
+            stringBuilder.append('-');
+            editText.setText(" ");
+        });
+        findViewById(R.id.buttonPoint).setOnClickListener(v -> {
+            editText.append(".");
+            stringBuilder.append('.');
+        });
+        findViewById(R.id.buttonANegativeNumber).setOnClickListener(v -> {
+//            Не могу догнать как запрограммировать эту кнопку.
+//            minus = -1 * Double.parseDouble(String.valueOf(editText.getText()));
+//            a = minus + "";
+        });
+        findViewById(R.id.buttonEqual).setOnClickListener(v -> {
+            b = String.valueOf(editText.getText());
+            stringBuilder.append("=");
+            editText.setText(stringBuilder);
+            if (mathSign == '+') {
+                textView.setText(String.valueOf(Double.parseDouble(a) + Double.parseDouble(b)));
+            } else if (mathSign == '-') {
+                textView.setText(String.valueOf(Double.parseDouble(a) - Double.parseDouble(b)));
+            } else if (mathSign == '*') {
+                textView.setText(String.valueOf(Double.parseDouble(a) * Double.parseDouble(b)));
+            } else if (mathSign == '/') {
+                textView.setText(String.valueOf(Double.parseDouble(a) / Double.parseDouble(b)));
+            }
+            a = String.valueOf(textView.getText());
+            stringBuilder.delete(0, stringBuilder.length());
+        });
 
     }
 
-    private void buttonClickInitialaizer2() {
-        int i = 0;
-        for (int button : buttons) {
-            setButtonClickListeners2(button, buttonsValue[i++]);
-        }
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
-    private void setButtonClickListeners2(int button, String number) {
-        findViewById(button).setOnClickListener(v -> setText2(number));
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 
-    public void setText2(String string) {
-        String buffer = editText.getText().toString();
-        editText.setText(String.format("%s", buffer + string));
-//        editText.append(String.valueOf(string));
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        editText.setText(savedInstanceState.getString(KEY_EDIT_TEXT));
+        textView.setText(savedInstanceState.getString(KEY_TEXT_VIEW));
     }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
 
-//    private void buttonClickInitialaizer() {
-//        int i = 0;
-//        for (int button : buttons) {
-//            setButtonClickListeners(button, i++);
-//        }
-//    }
-//    private void setButtonClickListeners(int button, int number) {
-//        findViewById(button).setOnClickListener(v -> setText(number));
-//    }
-//    public void setText(int string) {
-//        String buffer = editText.getText().toString();
-//        editText.setText(String.format("%s", buffer + string));
-////        editText.append(String.valueOf(string));
-//    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(KEY_EDIT_TEXT, String.valueOf(editText.getText()));
+        outState.putString(KEY_TEXT_VIEW, String.valueOf(textView.getText()));
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
 }
+
+
+

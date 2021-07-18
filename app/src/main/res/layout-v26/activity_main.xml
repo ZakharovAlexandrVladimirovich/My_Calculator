@@ -13,30 +13,31 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:autoSizeMaxTextSize="100sp"
             android:autoSizeMinTextSize="50sp"
             android:autoSizeTextType="uniform"
             android:background="@color/white"
-            android:inputType="numberDecimal"
             android:maxLines="1"
             android:textAlignment="textEnd"
             android:textSize="50sp"
-            tools:text="Calculate" />
+            android:textStyle="italic"
+            tools:text="@string/editText" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@color/black"
-            tools:text="@string/textview"
             android:textAlignment="textEnd"
             android:textColor="@color/white"
             android:textSize="30sp"
-            />
+            android:textStyle="bold"
+            tools:text="@string/textView" />
     </LinearLayout>
 
     <GridLayout
@@ -62,11 +63,14 @@
             android:backgroundTint="#100F0F"
             android:text="@string/button_cleaning" />
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonANegativeNumber"
             style="@style/MyButton2"
-            android:text="@string/button_a_negative_number" />
+            android:layout_row="0"
+            android:layout_column="2"
 
+            android:text="@string/button_a_negative_number" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiplication"
@@ -76,7 +80,6 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             style="@style/MyButtonNumbers"
-            android:backgroundTint="#FF5722"
             android:text="@string/button_7_text" />
 
         <com.google.android.material.button.MaterialButton
