@@ -6,29 +6,26 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/team"
-        android:layout_width="372dp"
-        android:layout_height="111dp"
-        android:backgroundTint="#090909"
-        android:gravity="center"
-        android:text="Выбрать тему"
-        android:textSize="40sp"
+        android:id="@+id/buttonTeamWhite"
+        android:layout_width="349dp"
+        android:layout_height="134dp"
+        android:backgroundTint="@color/white"
+        android:text="Светлая тема"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTeam"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonTeamBlack" />
 
-    <TextView
-        android:id="@+id/textViewTeam"
-        android:layout_width="729dp"
-        android:layout_height="wrap_content"
-        android:background="#090909"
-        android:gravity="center"
-        android:text="Тёмная тема"
-        android:textColor="#FAF9F9"
+    <Button
+        android:id="@+id/buttonTeamBlack"
+        android:layout_width="349dp"
+        android:layout_height="134dp"
+        android:text="Черная тема"
         android:textSize="34sp"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
