@@ -25,10 +25,11 @@
             android:textAlignment="textEnd"
             android:textSize="50sp"
             android:textStyle="italic"
-            tools:text="Calculate" />
+            tools:text="@string/editText" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@color/black"
@@ -40,7 +41,7 @@
     </LinearLayout>
 
     <GridLayout
-        android:id="@+id/gridLayout2"
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
@@ -53,20 +54,23 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonErase"
             style="@style/MyButton2"
-            android:backgroundTint="@color/my_color_c"
+            android:backgroundTint="#E30909"
             android:text="@string/button_erase" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCleaning"
             style="@style/MyButton2"
-            android:backgroundTint="@color/my_color_del"
+            android:backgroundTint="#100F0F"
             android:text="@string/button_cleaning" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonANegativeNumber"
             style="@style/MyButton2"
-            android:text="@string/button_a_negative_number" />
+            android:layout_row="0"
+            android:layout_column="2"
 
+            android:text="@string/button_a_negative_number" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiplication"
@@ -76,7 +80,6 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             style="@style/MyButtonNumbers"
-            android:backgroundTint="#FF5722"
             android:text="@string/button_7_text" />
 
         <com.google.android.material.button.MaterialButton
@@ -129,6 +132,7 @@
             style="@style/MyButtonNumbers"
             android:text="@string/button_3_text" />
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSum"
             style="@style/MyButton2"
@@ -139,10 +143,12 @@
             style="@style/MyButtonNumbers"
             android:text="@string/button_0_text" />
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPoint"
             style="@style/MyButton2"
             android:text="@string/button_point" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEqual"
@@ -152,4 +158,5 @@
             android:text="@string/button_equal" />
 
     </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

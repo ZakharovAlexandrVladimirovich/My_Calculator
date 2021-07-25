@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity3 extends AppCompatActivity {
     public static final String KEY_EDIT_TEXT = "KEY_EDIT_TEXT";
     public static final String KEY_TEXT_VIEW = "KEY_TEXT_VIEW";
     StringBuilder stringBuilder;
@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main3);
         stringBuilder = new StringBuilder();
         editText = findViewById(R.id.editText);
         textView = findViewById(R.id.textView);
         textView.setOnClickListener(v -> {
             textView.setText("Тут будет отображаться результат");
-            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-            MainActivity.this.startActivity(intent);
+            Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
+            MainActivity3.this.startActivity(intent);
         });
         findViewById(R.id.button0).setOnClickListener(v -> {
             editText.append("0");

@@ -7,59 +7,59 @@
     android:background="@drawable/kod_dvoichnyi"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_width="366dp"
+            android:layout_height="50dp"
             android:autoSizeMaxTextSize="100sp"
             android:autoSizeMinTextSize="50sp"
             android:autoSizeTextType="uniform"
             android:background="@color/white"
+            android:inputType="numberDecimal"
             android:maxLines="1"
             android:textAlignment="textEnd"
-            android:textSize="50sp"
+            android:textColor="@color/black"
             android:textStyle="italic"
             tools:text="Calculate" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:background="@color/black"
+            android:inputType="numberDecimal"
             android:textAlignment="textEnd"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:text="@string/textView" />
+
     </LinearLayout>
 
+
     <GridLayout
-        android:id="@+id/gridLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
         android:columnCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonErase"
             style="@style/MyButton2"
-            android:backgroundTint="@color/my_color_c"
+            android:backgroundTint="#E30909"
             android:text="@string/button_erase" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCleaning"
             style="@style/MyButton2"
-            android:backgroundTint="@color/my_color_del"
+            android:backgroundTint="#100F0F"
             android:text="@string/button_cleaning" />
 
         <com.google.android.material.button.MaterialButton
@@ -76,7 +76,6 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             style="@style/MyButtonNumbers"
-            android:backgroundTint="#FF5722"
             android:text="@string/button_7_text" />
 
         <com.google.android.material.button.MaterialButton
@@ -129,6 +128,7 @@
             style="@style/MyButtonNumbers"
             android:text="@string/button_3_text" />
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSum"
             style="@style/MyButton2"
@@ -139,10 +139,12 @@
             style="@style/MyButtonNumbers"
             android:text="@string/button_0_text" />
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPoint"
             style="@style/MyButton2"
             android:text="@string/button_point" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEqual"
@@ -150,6 +152,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
             android:text="@string/button_equal" />
+
 
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
